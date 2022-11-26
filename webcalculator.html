@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="js.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando JavaScript</title>
+</head>
+<body>
+   <div id="cabecalho">
+    <h1>Teste de Calculadora e Caixa de seleção</h1>
+    <p>Testando JavaScript criando uma calculadora e uma caixa de seleção simples.</p>
+
+
+   </div>
+
+<hr>
+
+    <br><br>
+    <div id="corpo">
+
+        <h2>Calculadora</h2>
+
+  a: <input type="text" id="a" value="">
+  b: <input type="text" id="b" value="">
+
+  =
+
+  <span id="result"></span>
+
+  <br><br>
+
+  <input type="button" value="+" onClick="doAdd()">
+  <input type="button" value="-" onClick="doSub()">
+  <input type="button" value="*" onClick="doMultiply()">
+  <input type="button" value="/" onClick="doDivide()">
+
+  <script type="text/javascript">
+
+    function doAdd(){
+        var aObj = document.getElementByld("a");
+        var bObj = document.getElementByld("b");
+        var resultObj = document.getElementByld("result");
+        var a = parseInt(aObj.value); //converte string em inteiro//* 
+        var b = parseInt(bObj.value);
+        resultObj.innerHTML =a+b;
+    }
+
+    function doSub(){
+        var aObj = document.getElementByld("a");
+        var bObj = document.getElementByld("b");
+        var resultObj = document.getElementByld("result");
+        var a = parseInt(aObj.value);
+        var = b parseInt(bObj.value);
+        resultObj.innerHTML =a-b;
+    }
+    
+    function doMultiply(){
+        var aObj = document.getElementByld("a");
+        var bObj = document.getElementByld("b");
+        var resultObj = document.getElementByld("result");
+        var a = parseInt(aObj.value);
+        var = b parseInt(bObj.value);
+        resultObj.innerHTML =a*b;
+    }
+
+    function doDivide(){
+        var aObj = document.getElementByld("a");
+        var bObj = document.getElementByld("b");
+        var resultObj = document.getElementByld("result");
+        var a = parseInt(aObj.value);
+        var = b parseInt(bObj.value);
+        resultObj.innerHTML =a/b;
+    }
+  </script>
+
+  <br><br><br><br><br>
+
+  <h2>Caixa de Seleção</h2>
+
+  <table width="400" border="1">
+    <tr>
+        <td>
+            <input type="checkbox" onclick="checkAll(this)">
+            Selecione
+        </td>
+        <td> Nome do Álbum</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="book">
+        </td>
+        <td>Easy Learning Java</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="book">
+        </td>
+        <td>Easy Learning Python 3</td>
+    </tr>
+  </table>
+
+  <script language="JavaScript">
+
+    function checkAll(obj){
+        var bookArray=document.getElementsByName("book");
+        for(var i=0; i<bookArray.length; i++){
+            bookArray[i].checked=obj.checked;
+        }
+    }
+  </script>
+</div>
+  <br><br><br>
+    
+</body>
+
+<br><br><br><br><br>
+
+
+
+<footer>
+    <P id="footer1">Devesenvolvedora: Bianca Gomes Barbosa De Oliveira.</P>
+</footer>
+</html>
